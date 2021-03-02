@@ -1,3 +1,4 @@
+
 *.vscode
+*.txt
 .DS_Store
-.txt 
