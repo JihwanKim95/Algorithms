@@ -20,13 +20,11 @@ int main(){
         cout << "-1";
         return 0; 
     }
-    // 
+     
     for(int i = '9'; i >= '0'; i--){
         for (int j = 0; j < cnt[i]; j++){
             cout << (char) i;
         }
     }
 
-
-
-} 
+} // S

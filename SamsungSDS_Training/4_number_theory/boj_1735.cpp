@@ -23,4 +23,4 @@ int main(){
     cout <<  p/g << ' ' << q/g;
 
     return 0;
-}
+} // S

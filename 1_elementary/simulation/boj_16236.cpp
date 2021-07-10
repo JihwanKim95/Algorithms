@@ -1,12 +1,12 @@
 
-// baby shark 
-
 #include <iostream>
 #include <vector>
 #include <queue>
 #include <algorithm>
 #define X first
 #define Y second
+
+/* 아기상어 */
 using namespace std;
 
 

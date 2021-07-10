@@ -49,7 +49,7 @@ int main(){
         }
     }
     cout << answer << ' ' << cnt;
-}
+} // S
 
 
 
