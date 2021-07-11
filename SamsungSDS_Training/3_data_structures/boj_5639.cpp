@@ -1,45 +1,46 @@
 #include <iostream>
 #include <vector>
 
-// 이진검색트리 
+/* 이진 검색 트리 */
 using namespace std;
 
-int idx = 0, tree[10000];
+int sz = 0, A[10000]; 
 
-
-void recur (int s, int e){
+void recur (int s, int e){        
+    // final condition 
     // a[s] == 전위순회에서는 root 
-    if(s == e){
-        cout << tree[s];
+    // 후위순회에서는 가장 마지막에 출력되어야 함
+    if(s == e){   // leaf
+        cout << A[s] << '\n';
+        return;
     }
     else if (s > e){
         return;
     }
-    else {
+
+    // use the property of binary tree
+    else { 
         int where = s + 1;
         while(where <= e){
-            if(tree[where] > a[s]) break;
+            if(A[where] > A[s]) break;
             else where++;
         }
-        // left 
-        
+        // left
+        recur(s + 1, where - 1);
         // right 
-        
+        recur(where, e);
+        // root 출력
+        cout << A[s] << '\n';
     }
-
 }
 
 int main(){
-    freopen("../../input.txt", "r", stdin);
+    // freopen("../input.txt", "r", stdin);
     ios_base::sync_with_stdio(0); cin.tie(0);
 
-    while(cin.eof() != true){
-        cin >> tree[idx];
-        idx++;
-    } 
-
-
-
-
+    while(cin >> A[sz]){
+        sz++;
+    }
     
+    recur(0, sz - 1);
 }
