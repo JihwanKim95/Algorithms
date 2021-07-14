@@ -11,18 +11,11 @@ int par[PIV][MAX];
 /* LCA */
 using namespace std;
 
-
 int lca(int a, int b){
     int tmp;
     if(dep[b] < dep[a]) tmp = a, a = b, b = tmp;
     tmp = dep[b] - dep[a];
-    for(int i = 0  i < PIV; i++){
-        if(tmp & (1 << i))
-            b = par[i][b];
-    }
-
 }
-
 
 void bfs(){
 
@@ -50,9 +43,9 @@ int main(){
     while(!q.empty()){
         int val = q.front(); q.pop();  // value 먼저 빼고 
         depth = q.front(); q.pop();    // depth 이후에 뺀다 
-        
+
 
     }
 
 
-}
+}df
