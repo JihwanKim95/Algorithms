@@ -11,7 +11,7 @@ int score;
 
 int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
-    freopen("../input.txt", "r", stdin);
+    //freopen("../input.txt", "r", stdin);
 
     int n;
     cin >> n;
@@ -31,12 +31,12 @@ int main(){
     d[1][1] = s[1], d[1][2] = 0;
     d[2][1] = s[2], d[2][2] = s[1] + s[2];
     for(int k = 3; k <= n; k++){
-        // 누적 한 칸을 연속해 밟았으면 이전 칸은 밟지 않은 것  
+        // 누적 한 칸을 연속해 밟았으면 이전 칸은 밟지 않은 것 [k-2] 
         d[k][1] = max(d[k-2][1], d[k-2][2]) + s[k];  
-        // 누적 두 칸을 밟았으면 이전 계단을 밟았으며, 이전에 누적 한 계단을 밟은 이력만 존재  
+        // 누적 두 칸을 밟았으면 이전 계단을 밟았으며[k-1], 이전에 누적 한 계단을 밟은 이력만 존재[1]  
         d[k][2] = d[k-1][1] + s[k];  
     }
 
     cout << max(d[n][1], d[n][2]); 
     return 0;
-}
+} // S 

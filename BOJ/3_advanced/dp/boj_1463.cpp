@@ -18,4 +18,4 @@ int main(){
     }
 
     cout << d[n];
-}
+} // S
