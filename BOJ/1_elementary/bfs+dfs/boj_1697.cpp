@@ -19,7 +19,7 @@ int main(){
         int cur = q.front(); q.pop();
         int na[3] = {cur + 1, cur - 1, cur * 2};
         for(int i = 0; i < 3; i++){
-            // current 값에서 +1 -1 *2 가 되므로 d[na[i]] != -1 에 걸리지 않음 
+            // cur 값에서 +1 -1 *2 가 되므로 d[na[i]] != -1 에 걸리지 않음 
             if(na[i] < 0 || na[i] >= 200001 || d[na[i]] != -1) continue;
             d[na[i]] = d[cur] + 1;
             q.push(na[i]);
