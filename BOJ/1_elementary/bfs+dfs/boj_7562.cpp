@@ -48,7 +48,7 @@ void solve(){
 int main(){
 	ios_base::sync_with_stdio(0); cin.tie(0); 
 	int T, length;
-	freopen("../../../input.txt", "r", stdin);
+	//freopen("../../../input.txt", "r", stdin);
 	cin >> T;
 	while(T--){
 		// initialize 
