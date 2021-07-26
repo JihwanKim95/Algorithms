@@ -3,12 +3,13 @@
 
 /* 별 찍기 - 10 */
 using namespace std;
-int N;   
+int N;
 
 void star(int i, int j, int num){
     if((i / num) % 3 == 1 && (j / num) % 3 == 1){
         cout << ' ';
     }
+    
     else {
         if(num / 3 == 0) cout << '*';
         else star(i, j, num/3);
