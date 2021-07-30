@@ -11,7 +11,7 @@ int a[25][25];
 bool c[25];
 
 void solve(int cnt, int idx) {
-    if (idx == n) return;
+    if (idx == n) return;  // index started from zero 
     if (cnt == n / 2) {
         int s1 = 0, s2 = 0;
         for (int i = 0; i < n; i++) {
