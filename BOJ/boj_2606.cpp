@@ -25,7 +25,7 @@ int main() {
 		cin >> a >> b;
 		com[a].push_back(b);
 		com[b].push_back(a);
-	}	
+	}
 	q.push(1);
 	vis[1] = 1;
 	int infected = 0;
