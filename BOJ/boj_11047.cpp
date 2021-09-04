@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <queue>
 
+/* 동전0 */
 using namespace std;
 
 int coin[15];
