@@ -4,11 +4,12 @@
 
 using namespace std; 
 
-stack<char> s;
 
-int solve(){
+
+void solve(){
     // put each letter in word into a stack before space
     // until the end of sentence 
+    stack<char> s;
     string str;
     getline(cin, str);
     str += '\n'; 
@@ -28,7 +29,7 @@ int solve(){
 int main(){
     ios_base::sync_with_stdio(0);
     cin.tie(0); 
-    //freopen("../input.txt", "r", stdin);
+    freopen("../input.txt", "r", stdin);
 
     int T; 
     cin >> T; 
